@@ -1,31 +1,69 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kontakt — Soul Therapy by Kate</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css" />
 </head>
-<body class="light-body">
-<header class="site-header light"><a class="brand" href="index.html">SOUL THERAPY · KATE</a><nav><a href="about.html">O mnie</a><a href="index.html#oferta">Oferta</a><a href="index.html#proces">Proces</a><a href="contact.html">Kontakt</a></nav><a class="btn btn-dark" href="https://cal.com/" target="_blank" rel="noopener">Umów sesję</a></header>
+<body class="contact-body">
+<header class="site-header">
+  <a class="brand" href="index.html">SOUL THERAPY · KATE</a>
+  <nav>
+    <a href="about.html">O mnie</a>
+    <a href="index.html#oferta">Oferta</a>
+    <a href="index.html#proces">Proces</a>
+    <a href="contact.html">Kontakt</a>
+  </nav>
+  <a class="btn" href="https://cal.com/" target="_blank" rel="noopener">Umów sesję</a>
+</header>
+
 <main>
-<section class="contact-page">
-  <div class="contact-info">
-    <p class="kicker">KONTAKT OGÓLNY</p>
-    <h1>Wyślij <em>wiadomość.</em></h1>
-    <p>Masz pytanie, chcesz zapytać o współpracę albo nie wiesz, która oferta jest dla Ciebie? Napisz tutaj.</p>
-    <dl><dt>Email</dt><dd><a href="mailto:twojemail@example.com">twojemail@example.com</a></dd><dt>Instagram</dt><dd><a href="https://instagram.com/" target="_blank" rel="noopener">@twojprofil</a></dd><dt>Czas odpowiedzi</dt><dd>Do 2 dni roboczych</dd></dl>
-  </div>
-  <form class="contact-form" action="https://formspree.io/f/TWOJ_KOD" method="POST">
-    <label>Twoje imię<input type="text" name="name" placeholder="Imię i nazwisko" required></label>
-    <label>Adres email<input type="email" name="email" placeholder="twoj@email.com" required></label>
-    <label>Co Cię sprowadza?<select name="topic" required><option value="">Wybierz najlepiej pasującą opcję</option><option>Sesja 1:1</option><option>Prywatny mentoring</option><option>Business, AI & Money Accelerator</option><option>Inne pytanie</option></select></label>
-    <label>Twoja wiadomość<textarea name="message" placeholder="Napisz, co czujesz, że jest ważne..." required></textarea></label>
-    <label>Jak mnie znalazłaś?<input type="text" name="source" placeholder="Instagram, polecenie, Google..."></label>
-    <div class="form-bottom"><p>Twoja wiadomość trafia bezpośrednio do mnie. Czytam wszystko.</p><button class="btn btn-dark" type="submit">Wyślij wiadomość →</button></div>
-  </form>
-</section>
+  <section class="contact-page">
+    <div class="contact-info">
+      <p class="kicker">KONTAKT OGÓLNY</p>
+      <h1>Wyślij <em>wiadomość.</em></h1>
+      <p>Masz pytanie, chcesz zapytać o współpracę albo nie wiesz, która oferta jest dla Ciebie? Napisz tutaj.</p>
+      <dl>
+        <dt>Email</dt>
+        <dd><a href="mailto:twojemail@example.com">twojemail@example.com</a></dd>
+        <dt>Instagram</dt>
+        <dd><a href="https://instagram.com/" target="_blank" rel="noopener">@twojprofil</a></dd>
+        <dt>Czas odpowiedzi</dt>
+        <dd>Do 2 dni roboczych</dd>
+      </dl>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/TWOJ_KOD" method="POST">
+      <label>Twoje imię<input type="text" name="name" placeholder="Imię i nazwisko" required></label>
+      <label>Adres email<input type="email" name="email" placeholder="twoj@email.com" required></label>
+      <label>Co Cię sprowadza?
+        <select name="topic" required>
+          <option value="">Wybierz najlepiej pasującą opcję</option>
+          <option>Sesja 1:1</option>
+          <option>Prywatny mentoring</option>
+          <option>Business, AI & Money Accelerator</option>
+          <option>Krąg Transformacji / waitlista</option>
+          <option>Inne pytanie</option>
+        </select>
+      </label>
+      <label>Twoja wiadomość<textarea name="message" placeholder="Napisz, co czujesz, że jest ważne..." required></textarea></label>
+      <label>Jak mnie znalazłaś?<input type="text" name="source" placeholder="Instagram, polecenie, Google..."></label>
+
+      <div class="form-bottom">
+        <p>Twoja wiadomość trafia bezpośrednio do mnie. Czytam wszystko.</p>
+        <button class="btn btn-dark" type="submit">Wyślij wiadomość →</button>
+      </div>
+    </form>
+  </section>
 </main>
-<footer class="light-footer"><span>SOUL THERAPY BY KATE</span><nav><a href="index.html">Home</a><a href="about.html">O mnie</a></nav></footer>
-</body></html>
+
+<footer class="light-footer">
+  <span>SOUL THERAPY BY KATE</span>
+  <nav><a href="index.html">Home</a><a href="about.html">O mnie</a><a href="index.html#oferta">Oferta</a></nav>
+</footer>
+</body>
+</html>

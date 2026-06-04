@@ -834,152 +834,53 @@ footer nav{
 
 /* KIT NEWSLETTER FORM FIX */
 
-.kit-newsletter-form{
-  max-width:760px;
-  margin:50px auto 0;
+.newsletter-form{
+  max-width:700px;
+  margin:40px auto 0;
+  display:flex;
+  gap:16px;
 }
 
-.kit-newsletter-form .formkit-form{
-  max-width:760px !important;
-  width:100% !important;
-  background:transparent !important;
-  border:none !important;
-  box-shadow:none !important;
-  padding:0 !important;
+.newsletter-form input{
+  flex:1;
+  height:68px;
+  padding:0 24px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.04);
+  color:#fff;
+  font-size:18px;
+  border-radius:0;
 }
 
-.kit-newsletter-form .formkit-fields{
-  display:flex !important;
-  width:100% !important;
-  gap:0 !important;
+.newsletter-form input::placeholder{
+  color:rgba(255,255,255,.55);
 }
 
-.kit-newsletter-form .formkit-field{
-  flex:1 !important;
-  margin:0 !important;
+.newsletter-form button{
+  height:68px;
+  padding:0 34px;
+  border:none;
+  background:#d6c08d;
+  color:#111;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  cursor:pointer;
 }
 
-.kit-newsletter-form input,
-.kit-newsletter-form .formkit-input{
-  width:100% !important;
-  height:68px !important;
-  background:#15122a !important;
-  color:#ffffff !important;
-  border:1px solid rgba(255,255,255,.12) !important;
-  border-right:none !important;
-  padding:0 26px !important;
-  font-size:16px !important;
-  font-family:Inter,Arial,sans-serif !important;
-  outline:0 !important;
+.newsletter-form button:hover{
+  opacity:.9;
 }
 
-.kit-newsletter-form input::placeholder,
-.kit-newsletter-form .formkit-input::placeholder{
-  color:#9f98ad !important;
-  opacity:1 !important;
-}
+@media (max-width:768px){
 
-.kit-newsletter-form button,
-.kit-newsletter-form .formkit-submit{
-  height:68px !important;
-  min-height:68px !important;
-  background:#d6bd86 !important;
-  color:#111 !important;
-  border:none !important;
-  padding:0 38px !important;
-  font-size:12px !important;
-  letter-spacing:.26em !important;
-  text-transform:uppercase !important;
-  font-weight:800 !important;
-  font-family:Inter,Arial,sans-serif !important;
-  cursor:pointer !important;
-  border-radius:0 !important;
-}
-
-.kit-newsletter-form .formkit-submit span{
-  background:transparent !important;
-  color:#111 !important;
-  padding:0 !important;
-}
-
-.kit-newsletter-form .formkit-powered-by,
-.kit-newsletter-form [data-element="powered-by"],
-.kit-newsletter-form .formkit-guarantee{
-  opacity:.35 !important;
-  filter:grayscale(1) !important;
-  margin-top:24px !important;
-}
-
-@media(max-width:900px){
-  .container{width:calc(100% - 36px)}
-  .site-header{
-    height:auto;
-    flex-wrap:wrap;
-    padding:18px 5vw;
-  }
-  .site-header nav{
-    order:3;
-    width:100%;
-    justify-content:space-between;
-    gap:10px;
-  }
-  .site-header nav a{font-size:10px}
-  .hero{min-height:auto;padding-top:90px}
-  .hero-actions,
-  .form-bottom,
-  footer,
-  .light-footer{
+  .newsletter-form{
     flex-direction:column;
-    align-items:flex-start;
-  }
-  .three,
-  .four,
-  .guide,
-  .split-head,
-  .offer-grid,
-  .cta,
-  .contact-page,
-  .membership-grid{
-    grid-template-columns:1fr;
-  }
-  .cards article,
-  .offer-grid article{
-    border-right:0;
-    border-bottom:1px solid #ebe4da;
-  }
-  .guide-photo{min-height:460px}
-  .philosophy-list{margin-left:0}
-  .newsletter-form{flex-direction:column}
-  .newsletter-form input{border-right:1px solid rgba(255,255,255,.08)}
-  .newsletter-form button{width:100%}
-  .membership-card{padding:44px 24px}
-  .membership-section{padding:80px 5vw}
-  .contact-page{padding:70px 5vw}
-}
-
-@media(max-width:700px){
-  .kit-newsletter-form .formkit-fields{
-    flex-direction:column !important;
   }
 
-  .kit-newsletter-form input,
-  .kit-newsletter-form .formkit-input{
-    border-right:1px solid rgba(255,255,255,.12) !important;
-    margin-bottom:12px !important;
+  .newsletter-form button{
+    width:100%;
   }
 
-  .kit-newsletter-form button,
-  .kit-newsletter-form .formkit-submit{
-    width:100% !important;
-  }
-
-  .experience-badge{
-    left:18px;
-    bottom:18px;
-    padding:18px 20px;
-  }
-
-  .experience-number{
-    font-size:48px;
-  }
 }

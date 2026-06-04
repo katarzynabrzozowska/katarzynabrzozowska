@@ -216,17 +216,35 @@ small,
   gap:34px;
 }
 
+/* MOVING TICKER */
+
 .ticker{
-  white-space:nowrap;
-  overflow:hidden;
-  padding:18px 0;
   background:#15102c;
-  color:#8f83a8;
   border-top:1px solid rgba(214,189,134,.15);
   border-bottom:1px solid rgba(214,189,134,.15);
+  overflow:hidden;
+  white-space:nowrap;
+  position:relative;
+  padding:18px 0;
+}
+
+.ticker-track{
+  display:flex;
+  width:max-content;
+  animation:tickerScroll 35s linear infinite;
+}
+
+.ticker-track span{
+  padding-right:80px;
+  color:rgba(214,189,134,.75);
   font-size:12px;
   letter-spacing:.30em;
   text-transform:uppercase;
+}
+
+@keyframes tickerScroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
 }
 
 .section-light{
@@ -762,6 +780,136 @@ footer nav{
   text-align:center;
 }
 
+
+/* EXPERIENCE BADGE */
+
+.guide-photo{
+  position:relative;
+}
+
+.experience-badge{
+  position:absolute;
+  left:30px;
+  bottom:30px;
+  background:rgba(11,9,34,.92);
+  border:1px solid rgba(214,189,134,.2);
+  padding:24px 28px;
+  min-width:180px;
+  backdrop-filter:blur(12px);
+  z-index:3;
+}
+
+.experience-number{
+  font-family:"Cormorant Garamond",serif;
+  font-size:64px;
+  line-height:1;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+
+.experience-text{
+  font-size:11px;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.7);
+  line-height:1.8;
+}
+
+/* PHILOSOPHY QUOTES */
+
+.philosophy-list article blockquote{
+  margin:22px 0 0;
+  padding:0;
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.45rem;
+  line-height:1.55;
+  font-style:italic;
+  color:#8f83a8;
+  border:none;
+}
+
+.philosophy-list article h3 em{
+  color:#8f83a8;
+}
+
+/* KIT NEWSLETTER FORM FIX */
+
+.kit-newsletter-form{
+  max-width:760px;
+  margin:50px auto 0;
+}
+
+.kit-newsletter-form .formkit-form{
+  max-width:760px !important;
+  width:100% !important;
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+  padding:0 !important;
+}
+
+.kit-newsletter-form .formkit-fields{
+  display:flex !important;
+  width:100% !important;
+  gap:0 !important;
+}
+
+.kit-newsletter-form .formkit-field{
+  flex:1 !important;
+  margin:0 !important;
+}
+
+.kit-newsletter-form input,
+.kit-newsletter-form .formkit-input{
+  width:100% !important;
+  height:68px !important;
+  background:#15122a !important;
+  color:#ffffff !important;
+  border:1px solid rgba(255,255,255,.12) !important;
+  border-right:none !important;
+  padding:0 26px !important;
+  font-size:16px !important;
+  font-family:Inter,Arial,sans-serif !important;
+  outline:0 !important;
+}
+
+.kit-newsletter-form input::placeholder,
+.kit-newsletter-form .formkit-input::placeholder{
+  color:#9f98ad !important;
+  opacity:1 !important;
+}
+
+.kit-newsletter-form button,
+.kit-newsletter-form .formkit-submit{
+  height:68px !important;
+  min-height:68px !important;
+  background:#d6bd86 !important;
+  color:#111 !important;
+  border:none !important;
+  padding:0 38px !important;
+  font-size:12px !important;
+  letter-spacing:.26em !important;
+  text-transform:uppercase !important;
+  font-weight:800 !important;
+  font-family:Inter,Arial,sans-serif !important;
+  cursor:pointer !important;
+  border-radius:0 !important;
+}
+
+.kit-newsletter-form .formkit-submit span{
+  background:transparent !important;
+  color:#111 !important;
+  padding:0 !important;
+}
+
+.kit-newsletter-form .formkit-powered-by,
+.kit-newsletter-form [data-element="powered-by"],
+.kit-newsletter-form .formkit-guarantee{
+  opacity:.35 !important;
+  filter:grayscale(1) !important;
+  margin-top:24px !important;
+}
+
 @media(max-width:900px){
   .container{width:calc(100% - 36px)}
   .site-header{
@@ -807,4 +955,31 @@ footer nav{
   .membership-card{padding:44px 24px}
   .membership-section{padding:80px 5vw}
   .contact-page{padding:70px 5vw}
+}
+
+@media(max-width:700px){
+  .kit-newsletter-form .formkit-fields{
+    flex-direction:column !important;
+  }
+
+  .kit-newsletter-form input,
+  .kit-newsletter-form .formkit-input{
+    border-right:1px solid rgba(255,255,255,.12) !important;
+    margin-bottom:12px !important;
+  }
+
+  .kit-newsletter-form button,
+  .kit-newsletter-form .formkit-submit{
+    width:100% !important;
+  }
+
+  .experience-badge{
+    left:18px;
+    bottom:18px;
+    padding:18px 20px;
+  }
+
+  .experience-number{
+    font-size:48px;
+  }
 }
